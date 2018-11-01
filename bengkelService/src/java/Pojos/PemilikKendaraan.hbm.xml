@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 1, 2018 12:42:34 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pojos.PemilikKendaraan" table="pemilikKendaraan" catalog="db165314056" optimistic-lock="version">
+        <id name="nama" type="string">
+            <column name="nama" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="email" type="string">
+            <column name="email" length="50" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="12" />
+        </property>
+    </class>
+</hibernate-mapping>

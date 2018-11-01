@@ -40,10 +40,10 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-reverse-engineering>
-  <schema-selection match-catalog="165314056"/>
-  <table-filter match-name="service"/>
+  <schema-selection match-catalog="db165314056"/>
   <table-filter match-name="pemilikBengkel"/>
   <table-filter match-name="pemilikKendaraan"/>
-  <table-filter match-name="location"/>
   <table-filter match-name="user"/>
+  <table-filter match-name="location"/>
+  <table-filter match-name="service"/>
 </hibernate-reverse-engineering>
