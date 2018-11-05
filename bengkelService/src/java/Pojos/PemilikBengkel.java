@@ -18,6 +18,7 @@ public class PemilikBengkel  implements java.io.Serializable {
      private String jenisKendaraan;
      private Double longitud;
      private Double latitude;
+     private String jamTutup;
 
     public PemilikBengkel() {
     }
@@ -26,7 +27,7 @@ public class PemilikBengkel  implements java.io.Serializable {
     public PemilikBengkel(String email) {
         this.email = email;
     }
-    public PemilikBengkel(String email, String nama, String password, String namaBengkel, String alamat, String jamBuka, String jenisKendaraan, Double longitud, Double latitude) {
+    public PemilikBengkel(String email, String nama, String password, String namaBengkel, String alamat, String jamBuka, String jenisKendaraan, Double longitud, Double latitude, String jamTutup) {
        this.email = email;
        this.nama = nama;
        this.password = password;
@@ -36,6 +37,7 @@ public class PemilikBengkel  implements java.io.Serializable {
        this.jenisKendaraan = jenisKendaraan;
        this.longitud = longitud;
        this.latitude = latitude;
+       this.jamTutup = jamTutup;
     }
    
     public String getEmail() {
@@ -80,6 +82,7 @@ public class PemilikBengkel  implements java.io.Serializable {
     public void setJamBuka(String jamBuka) {
         this.jamBuka = jamBuka;
     }
+    
     public String getJenisKendaraan() {
         return this.jenisKendaraan;
     }
@@ -100,6 +103,14 @@ public class PemilikBengkel  implements java.io.Serializable {
     
     public void setLatitude(Double latitude) {
         this.latitude = latitude;
+    }
+    
+    public String getJamTutup() {
+        return this.jamTutup;
+    }
+    
+    public void setJamTutup(String jamTutup) {
+        this.jamTutup = jamTutup;
     }
 
 
