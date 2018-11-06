@@ -32,5 +32,8 @@
         <property name="latitude" type="java.lang.Double">
             <column name="latitude" precision="22" scale="0" />
         </property>
+        <property name="jamTutup" type="string">
+            <column name="jamTutup" length="20" />
+        </property>
     </class>
 </hibernate-mapping>
