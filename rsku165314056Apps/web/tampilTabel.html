@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       
+          <style>
+            h1 {
+                border-bottom: 3px solid #cc9900;
+                color: #996600;
+                font-size: 30px;
+            }
+            table, th ,td  {
+                border: 1px solid grey;
+                border-collapse: collapse;
+                padding: 5px;
+            }
+            table tr:nth-child(odd) {
+                background-color: #f1f1f1;
+            }
+            table tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+        </style>
+
+        <br>
+        <br>
+
+    <center><button type="button" onclick="loadDoc()" id="btn">Daftar Dokter</button><br><br></center>
+
+    <div id="id01"></div>
+
+    <script>
+        function loadDoc() {
+            var xmlhttp = new XMLHttpRequest();
+
+                 var url = "http://it-projects.usd.ac.id:8080/rsku/webresources/pasien";
+
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this.responseText);
+                }
+            }
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+
+            function myFunction(response) {
+                var arr = JSON.parse(response);
+                var i;
+              var out = "<center><table align='center' style='width: 60%;' border='1'> <tr><td>noRm</td><td>nama</td><td>alamat</td></tr></center>";
+
+                for (i = 0; i < arr.length; i++) {
+                    out += "<tr><td>" +
+                            arr[i].id +
+                            "</td><td>" +
+                            arr[i].nama +
+                            "</td><td>" +
+                            arr[i].spesialis;
+
+                }
+                out += "</table>";
+                document.getElementById("id01").innerHTML = out;
+            }
+        }
+    </script>
+        
+        
+        
+        
+    </body>
+</html>
