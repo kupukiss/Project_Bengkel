@@ -19,20 +19,20 @@ import javax.ws.rs.core.MediaType;
  *
  * @author admin
  */
-@Path("userBengkel")
-public class userBengkelResource {
+@Path("user")
+public class UserResource {
 
     @Context
     private UriInfo context;
 
     /**
-     * Creates a new instance of userBengkelResource
+     * Creates a new instance of UserResource
      */
-    public userBengkelResource() {
+    public UserResource() {
     }
 
     /**
-     * Retrieves representation of an instance of service.userBengkelResource
+     * Retrieves representation of an instance of service.UserResource
      * @return an instance of java.lang.String
      */
     @GET
@@ -43,7 +43,7 @@ public class userBengkelResource {
     }
 
     /**
-     * PUT method for updating or creating an instance of userBengkelResource
+     * PUT method for updating or creating an instance of UserResource
      * @param content representation for the resource
      */
     @PUT

@@ -25,6 +25,23 @@ public class LocationHelper {
         return list;
     }
 
+      public static String toJson() {
+        LocationHelper helper = new LocationHelper();
+        List<Location> list = helper.getLocation();
+        String result = "[";
+        for (int i = 0; i < list.size(); i++) {
+            if (i < list.size() - 1) {
+                result = result + list.get(i).toJson() + ",\n";
+            } else {
+                result = result + list.get(i).toJson() + "\n";
+            }
+        }
+        result = result + "]";
+        return result;
+    }
 }
+
+
+
 
 

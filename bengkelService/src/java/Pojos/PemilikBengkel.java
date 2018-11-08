@@ -113,9 +113,15 @@ public class PemilikBengkel  implements java.io.Serializable {
         this.jamTutup = jamTutup;
     }
 
+public String toJson() {
+
+        return "{\"nama\":" + getNama()+ ",\"email\":" + getEmail()+ ",\"password\":" + getPassword()+ ",\"alamat\":" + getAlamat()+ ",\"jamBuka\":" + getJamBuka() 
+                + ",\"jenisKendaraan\":" + getJenisKendaraan() + ",\"longitud\":" + getLongitud() + 
+                ",\"latitude\":" + getLatitude() + ",\"jamTutup\":" + getJamTutup() + "}";
 
 
 
-}
+
+}}
 
 

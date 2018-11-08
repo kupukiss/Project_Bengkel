@@ -58,8 +58,11 @@ public class Location  implements java.io.Serializable {
     }
 
 
+ public String toJson() {
+
+        return "{\"id\":" + getId()+ ",\"lat\":" + getLat()+ ",\"lng\":" + getLng()+ ",\"name\":" + getName()+"}";
 
 
-}
+}}
 
 

@@ -5,6 +5,7 @@
  */
 package helper;
 
+import Pojos.Location;
 import Pojos.Service;
 import util.NewHibernateUtil;
 import java.util.List;
@@ -24,7 +25,20 @@ public class ServiceHelper {
         List<Service> list = q.list();
         return list;
     }
-
+   public static String toJson() {
+        ServiceHelper helper = new ServiceHelper();
+        List<Service> list = helper.getService();
+        String result = "[";
+        for (int i = 0; i < list.size(); i++) {
+            if (i < list.size() - 1) {
+                result = result + list.get(i).toJson() + ",\n";
+            } else {
+                result = result + list.get(i).toJson() + "\n";
+            }
+        }
+        result = result + "]";
+        return result;
+    }
 }
 
 

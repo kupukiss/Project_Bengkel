@@ -49,8 +49,10 @@ public class PemilikKendaraan  implements java.io.Serializable {
     }
 
 
+public String toJson() {
 
+        return "{\"nama\":" + getNama()+ ",\"email\":" + getEmail()+ ",\"password\":" + getPassword()+ "}";
 
-}
+}}
 
 

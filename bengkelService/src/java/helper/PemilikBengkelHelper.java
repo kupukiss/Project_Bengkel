@@ -5,6 +5,7 @@
  */
 package helper;
 
+import Pojos.Location;
 import Pojos.PemilikBengkel;
 import util.NewHibernateUtil;
 import java.util.List;
@@ -24,7 +25,20 @@ public class PemilikBengkelHelper {
         List<PemilikBengkel> list = q.list();
         return list;
     }
-
+    public static String toJson() {
+        PemilikBengkelHelper helper = new PemilikBengkelHelper();
+        List<PemilikBengkel> list = helper.getPemilikBengkel();
+        String result = "[";
+        for (int i = 0; i < list.size(); i++) {
+            if (i < list.size() - 1) {
+                result = result + list.get(i).toJson() + ",\n";
+            } else {
+                result = result + list.get(i).toJson() + "\n";
+            }
+        }
+        result = result + "]";
+        return result;
+    }
 }
 
 
