@@ -48,7 +48,7 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="daftar.html">Pendaftaran</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="daftarPemilikBengkel.html">Pendaftaran</a>
             </li>
             
           </ul>
@@ -107,14 +107,21 @@
         <script>
             function make_json(form) {
                 var json = {
-                   
+                    "email": form.email.value,
+                     "password": form.pasword.value,
                     "nama": form.nama.value,
                     "alamat": form.alamat.value,
+                    "jambuka": form.jamBuka.value,
+                    "jamtutup":form.jamTutup.value,
+                    "JSKEN":form.jenisKendaraan.value,
+                    "Longitude":form.longitud.value,
+                    "Langtitude":form.latitude.value
+                    
                     
                 };
 
                 var html = JSON.stringify(json, 0, 100);
-                var url = "http://localhost:8085/API_WEB/webresources/pasien/addPasien";
+                var url = "http://localhost:8085/bengkelService/webresources/PemilikBengkel/add";
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", url, false);
                 xhr.setRequestHeader("Content-type", "application/json");
