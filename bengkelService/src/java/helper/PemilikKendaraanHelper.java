@@ -5,12 +5,13 @@
  */
 package helper;
 
-import Pojos.PemilikBengkel;
+
 import Pojos.PemilikKendaraan;
 import util.NewHibernateUtil;
 import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 public class PemilikKendaraanHelper {
 
@@ -40,6 +41,17 @@ public class PemilikKendaraanHelper {
         result = result + "]";
         return result;
     }
-    
+    public void addNewPK(
+            String nama,
+            String email,
+            String password
+    ) {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+          Transaction tx = session.beginTransaction();
+           PemilikKendaraan PB=new  PemilikKendaraan (nama,email,password);
+           session.saveOrUpdate(PB);
+           tx.commit();
+           session.close();
+  }
    
 }

@@ -11,6 +11,7 @@ import util.NewHibernateUtil;
 import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 public class PemilikBengkelHelper {
 
@@ -18,13 +19,14 @@ public class PemilikBengkelHelper {
 
     }
 
-    public List<PemilikBengkel> getPemilikBengkel(){
+    public List<PemilikBengkel> getPemilikBengkel() {
         Session session = NewHibernateUtil.getSessionFactory().openSession();
         String query = "from PemilikBengkel";
         Query q = session.createQuery(query);
         List<PemilikBengkel> list = q.list();
         return list;
     }
+
     public static String toJson() {
         PemilikBengkelHelper helper = new PemilikBengkelHelper();
         List<PemilikBengkel> list = helper.getPemilikBengkel();
@@ -39,6 +41,20 @@ public class PemilikBengkelHelper {
         result = result + "]";
         return result;
     }
-}
 
+    public void addNewPK(
+            String nama,
+            String email,
+            String password
+    ) {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+          Transaction tx = session.beginTransaction();
+           PemilikBengkel PB=new  PemilikBengkel (nama,email,password);
+           session.saveOrUpdate(PB);
+           tx.commit();
+           session.close();
+  }
+        
+    }
+    
 
