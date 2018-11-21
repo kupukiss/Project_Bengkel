@@ -54,6 +54,17 @@ public class PemilikBengkelHelper {
            tx.commit();
            session.close();
   }
+    
+     public PemilikBengkelHelper login(String email,String password){
+        Session session = NewHibernateUtil.getSessionFactory().openSession();
+        String q = "From User a where a.email=:email AND a.password =:password";
+        
+        Query query = session.createQuery(q);
+        query.setParameter("email", email);
+        query.setParameter("password", password);
+        
+        return (PemilikBengkelHelper) query.uniqueResult();
+    }
         
     }
     

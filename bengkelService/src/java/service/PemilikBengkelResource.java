@@ -5,6 +5,7 @@
  */
 package service;
 
+import com.google.gson.Gson;
 import helper.LocationHelper;
 import helper.PemilikBengkelHelper;
 import javax.ws.rs.core.Context;
@@ -15,6 +16,7 @@ import javax.ws.rs.GET;
 
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -23,7 +25,7 @@ import javax.ws.rs.core.Response;
  *
  * @author admin
  */
-@Path("PemilikBengkel")
+@Path("PemilikBengkel/login")
 public class PemilikBengkelResource {
 
     @Context
@@ -66,5 +68,12 @@ public class PemilikBengkelResource {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     public void putJson(String content) {
+    }
+    
+
+   @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
+        return new Gson().toJson(new PemilikBengkelHelper().login(email, password));
     }
 }
