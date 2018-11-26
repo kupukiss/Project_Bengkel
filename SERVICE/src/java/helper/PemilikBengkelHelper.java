@@ -55,7 +55,7 @@ public class PemilikBengkelHelper {
     ) {
         Session session = NewHibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        PemilikBengkel PB = new PemilikBengkel(nama, email, password,namaBengkel,alamat,jamBuka,jamTutup,jenisKendaraan,longitud,latitude);
+        PemilikBengkel PB = new PemilikBengkel(nama, email, password,namaBengkel,alamat,jamBuka,jenisKendaraan,longitud,latitude,jamTutup);
         session.saveOrUpdate(PB);
         tx.commit();
         session.close();
