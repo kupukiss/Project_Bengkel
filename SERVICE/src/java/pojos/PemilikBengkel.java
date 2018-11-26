@@ -43,6 +43,10 @@ public class PemilikBengkel  implements java.io.Serializable {
     public PemilikBengkel(String nama, String email, String password) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public PemilikBengkel(String nama, String email, String password, String namaBengkel, String alamat, String jamBuka, String jamTutup, String jenisKendaraan, Double longitud, Double latitude) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
    
     public String getEmail() {
         return this.email;
