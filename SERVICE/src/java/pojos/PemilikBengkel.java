@@ -114,16 +114,19 @@ public class PemilikBengkel  implements java.io.Serializable {
     }
 
     public String toJson() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         return "{\"nama\":" + getNama()+ ",\"email\":" + getEmail() + ",\"password\":" + getPassword() + 
+                 ",\"namaBengkel\":" + getNamaBengkel() + ",\"alamat\":" + getAlamat() + ",\"jamBuka\":" +getJamBuka() + 
+                 ",\"jenisKendaraan\":" +  getJenisKendaraan() + ",\"longitud\":" + getLongitud() + ",\"latitude\":" + getLatitude() + 
+                  ",\"jamTutup\":" + getJamTutup() + "}";
+
+    
     }
 
-    public Object login(String email, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    public Object login(String email, String password) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
-
-
-
+  
 }
 
 

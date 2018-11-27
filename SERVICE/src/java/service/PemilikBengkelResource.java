@@ -6,7 +6,6 @@
 package service;
 
 import com.google.gson.Gson;
-import helper.LocationHelper;
 import helper.PemilikBengkelHelper;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -15,7 +14,6 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -93,10 +91,10 @@ public class PemilikBengkelResource {
       return Response.status(200).entity(PB).build();
 }
   
-@Path("login")
-   @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
-        return new Gson().toJson(new PemilikBengkel().login(email, password));
-    }
+//@Path("login")
+//   @GET
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
+//        return new Gson().toJson(new PemilikBengkel().login(email, password));
+//    }
 }

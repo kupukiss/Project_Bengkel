@@ -5,7 +5,6 @@
  */
 package service;
 
-import helper.LocationHelper;
 import helper.ServiceHelper;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
