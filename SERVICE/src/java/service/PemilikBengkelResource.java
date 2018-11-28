@@ -7,6 +7,7 @@ package service;
 
 import com.google.gson.Gson;
 import helper.PemilikBengkelHelper;
+import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
@@ -15,7 +16,6 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 
 import javax.ws.rs.Path;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import pojos.PemilikBengkel;
@@ -39,14 +39,19 @@ public class PemilikBengkelResource {
 
     /**
      * Retrieves representation of an instance of service.PemilikBengkelResource
+     *
      * @return an instance of java.lang.String
      */
-      @GET
+    @GET
     @Produces(MediaType.APPLICATION_JSON)
-     public Response getJson() {
-        //TODO return proper representation object
-                return Response.status(Response.Status.OK)
-       .entity(PemilikBengkelHelper.toJson())
+    public Response getJson() {
+        PemilikBengkelHelper help = new PemilikBengkelHelper();
+        List<PemilikBengkel> list = help.getPemilikBengkel();
+        Gson gson = new Gson();
+        String json = gson.toJson(list);
+        System.out.println(json);
+        return Response.status(Response.Status.OK)//penting utama
+                .entity(json)//utama
                 .header("Access-Control-Allow-Origin", "*")
                 .header("Access-Control-Allow-Methods",
                         "GET,POST,HEAD,OPTIONS,PUT")
@@ -59,38 +64,41 @@ public class PemilikBengkelResource {
                 .header("Access-Control-Max-Age", "2")
                 .header("Access-Preflight-Maxage", "2")
                 .build();
-   }
+    }
 
     /**
      * PUT method for updating or creating an instance of PemilikBengkelResource
+     *
      * @param content representation for the resource
      */
 //    @PUT
 //    @Consumes(MediaType.APPLICATION_JSON)
 //    public void putJson(String content) {
 //    }
-     @POST
-  @Path("addPB")
-  @Consumes(javax.ws.rs.core.MediaType.APPLICATION_JSON)
-  public Response addNewPB(String data){
-      Gson gson=new Gson();
-      PemilikBengkel PB=gson.fromJson(data,PemilikBengkel.class);
-      PemilikBengkelHelper helper=new PemilikBengkelHelper();
-      helper.addNewPB(
-              PB.getNama(), 
-              PB.getEmail(), 
-              PB.getPassword(),
-              PB.getNamaBengkel(),
-              PB.getAlamat(),
-              PB.getJamBuka(),
-              PB.getJamTutup(),
-              PB.getJenisKendaraan(),
-              PB.getLatitude(),
-              PB.getLongitud()
-      );
-      return Response.status(200).entity(PB).build();
-}
-  
+    @POST
+    @Path("addPB")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addNewPB(String data) {
+        Gson gson = new Gson();
+        PemilikBengkel bengkel = gson.fromJson(data, PemilikBengkel.class);
+        PemilikBengkelHelper helper = new PemilikBengkelHelper();
+        helper.addNewPB(
+                bengkel.getNama(),
+                bengkel.getEmail(),
+                bengkel.getPassword(),
+                bengkel.getNamaBengkel(),
+                bengkel.getAlamat(),
+                bengkel.getJamBuka(),
+                bengkel.getJenisKendaraan(),
+                bengkel.getLongitud(),
+                bengkel.getLatitude(),
+                bengkel.getJamTutup());
+
+        return Response
+                .status(200)
+                .entity(bengkel)
+                .build();
+    }
 //@Path("login")
 //   @GET
 //    @Produces(MediaType.APPLICATION_JSON)

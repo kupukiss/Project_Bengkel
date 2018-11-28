@@ -48,14 +48,14 @@ public class PemilikBengkelHelper {
             String namaBengkel,
             String alamat,
             String jamBuka,
-            String jamTutup,
             String jenisKendaraan,
             Double longitud,
-            Double latitude
+            Double latitude,
+            String jamTutup
     ) {
         Session session = NewHibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        PemilikBengkel PB = new PemilikBengkel(nama, email, password,namaBengkel,alamat,jamBuka,jenisKendaraan,longitud,latitude,jamTutup);
+        PemilikBengkel PB = new PemilikBengkel(nama, email, password, namaBengkel, alamat, jamBuka, jenisKendaraan, longitud, latitude, jamTutup);
         session.saveOrUpdate(PB);
         tx.commit();
         session.close();
