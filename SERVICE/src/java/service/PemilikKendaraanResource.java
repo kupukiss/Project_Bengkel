@@ -90,6 +90,6 @@ public class PemilikKendaraanResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
-        return new Gson().toJson(new PemilikKendaraan().login(email, password));
+        return new Gson().toJson(new PemilikKendaraanHelper().login(email, password));
     }
 }

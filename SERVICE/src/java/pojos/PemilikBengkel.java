@@ -122,15 +122,13 @@ public class PemilikBengkel  implements java.io.Serializable {
     
     }
 
-    public Object Login(String email, String password) {
-       return "{\"email\":" + getEmail() +
-                 ",\"password\":" + getPassword() + "}";
+   
 
     
     }
 
 
   
-}
+
 
 

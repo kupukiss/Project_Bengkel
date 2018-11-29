@@ -7,6 +7,7 @@ package service;
 
 import com.google.gson.Gson;
 import helper.PemilikBengkelHelper;
+import helper.PemilikKendaraanHelper;
 import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -104,7 +105,7 @@ public class PemilikBengkelResource {
    @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
-        return new Gson().toJson(new PemilikBengkel().Login(email, password));
+         return new Gson().toJson(new PemilikBengkelHelper().login(email, password));
     }
     
     
