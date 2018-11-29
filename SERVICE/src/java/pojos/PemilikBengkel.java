@@ -9,8 +9,9 @@ package pojos;
 public class PemilikBengkel  implements java.io.Serializable {
 
 
-     private String email;
+    
      private String nama;
+      private String email;
      private String password;
      private String namaBengkel;
      private String alamat;
@@ -27,9 +28,10 @@ public class PemilikBengkel  implements java.io.Serializable {
     public PemilikBengkel(String email) {
         this.email = email;
     }
-    public PemilikBengkel(String email, String nama, String password, String namaBengkel, String alamat, String jamBuka, String jenisKendaraan, Double longitud, Double latitude, String jamTutup) {
-       this.email = email;
+    public PemilikBengkel( String nama,String email, String password, String namaBengkel, String alamat, String jamBuka, String jenisKendaraan, Double longitud, Double latitude, String jamTutup) {
+       
        this.nama = nama;
+       this.email = email;
        this.password = password;
        this.namaBengkel = namaBengkel;
        this.alamat = alamat;
