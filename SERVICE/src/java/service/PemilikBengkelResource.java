@@ -16,6 +16,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import pojos.PemilikBengkel;
@@ -99,10 +100,12 @@ public class PemilikBengkelResource {
                 .entity(bengkel)
                 .build();
     }
-//@Path("login")
-//   @GET
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
-//        return new Gson().toJson(new PemilikBengkel().login(email, password));
-//    }
+@Path("login")
+   @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
+        return new Gson().toJson(new PemilikBengkel().Login(email, password));
+    }
+    
+    
 }

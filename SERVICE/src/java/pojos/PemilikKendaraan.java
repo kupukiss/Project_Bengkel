@@ -52,9 +52,9 @@ public class PemilikKendaraan  implements java.io.Serializable {
           return "{\"nama\":" + getNama()+ ",\"email\":" + getEmail() + ",\"password\":" + getPassword() + "}";
  }
 
-//    public Object login(String email, String password) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
+    public Object login(String email, String password) {
+         return "{\"email\":" + getEmail() + ",\"password\":" + getPassword() + "}";
+  }
 
 
 

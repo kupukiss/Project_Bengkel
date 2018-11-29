@@ -5,22 +5,25 @@
  */
 package service;
 
+
+import com.google.gson.Gson;
 import helper.userHelper;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
 /**
  * REST Web Service
  *
- * @author admin
- */@Path("user")
+ * @author Acer
+ */
+@Path("User")
 public class UserResource {
 
     @Context
@@ -33,31 +36,21 @@ public class UserResource {
     }
 
     /**
-     * Retrieves representation of an instance of service.UserResource
+     * Retrieves representation of an instance of user.userresources
+     *
+     * @param email
+     * @param password
      * @return an instance of java.lang.String
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-     public Response getJson() {
-        //TODO return proper representation object
-                return Response.status(Response.Status.OK)
-       .entity(userHelper.toJson())
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Methods",
-                        "GET,POST,HEAD,OPTIONS,PUT")
-                .header("Access-Control-Allow-Headers",
-                        "Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers")
-                .header("Access-Exposed-Headers",
-                        "Access-Control-Allow-Origin,Access-Control-Allow-Credentials")
-                .header("Access-Support-Credentials",
-                        "true")
-                .header("Access-Control-Max-Age", "2")
-                .header("Access-Preflight-Maxage", "2")
-                .build();
-   }
+    public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
+        return new Gson().toJson(new userHelper().Login(email, password));
+    }
 
     /**
-     * PUT method for updating or creating an instance of UserResource
+     * PUT method for updating or creating an instance of userresources
+     *
      * @param content representation for the resource
      */
     @PUT

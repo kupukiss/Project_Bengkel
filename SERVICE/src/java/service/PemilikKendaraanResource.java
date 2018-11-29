@@ -86,11 +86,10 @@ public class PemilikKendaraanResource {
       return Response.status(200).entity(PK).build();
     }
 
-//    @Path("login")
-//    @GET
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
-//        return new Gson().toJson(new PemilikKendaraan().login(email, password));
-//    }
-//}
+    @Path("login")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
+        return new Gson().toJson(new PemilikKendaraan().login(email, password));
+    }
 }

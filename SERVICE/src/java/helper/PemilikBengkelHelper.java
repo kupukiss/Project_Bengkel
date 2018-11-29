@@ -63,7 +63,7 @@ public class PemilikBengkelHelper {
 
     public PemilikBengkel login(String email, String password) {
         Session session = NewHibernateUtil.getSessionFactory().openSession();
-        String q = "From User a where a.email=:email AND a.password =:password";
+        String q = "From PemilikBengkel p where p.email=:email AND p.password =:password";
 
         Query query = session.createQuery(q);
         query.setParameter("email", email);

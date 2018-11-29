@@ -5,12 +5,11 @@
  */
 package helper;
 
-import java.util.List;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import pojos.Location;
 import pojos.User;
 import util.NewHibernateUtil;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -19,28 +18,16 @@ import util.NewHibernateUtil;
 public class userHelper {
 
     public userHelper() {
-    }
 
-    public List<User> getUser() {
+    }
+    public User Login(String email, String password) {
         Session session = NewHibernateUtil.getSessionFactory().openSession();
-        String query = "from User";
-        Query q = session.createQuery(query);
-        List<User> list = q.list();
-        return list;
+        String q = "From User a where a.email=:email AND a.password =:password";
+        Query query = session.createQuery(q);
+        query.setParameter("email", email);
+        query.setParameter("password", password);
+
+        return (User) query.uniqueResult();
     }
 
-    public static String toJson() {
-        userHelper helper = new userHelper();
-        List<User> list = helper.getUser();
-        String result = "[";
-        for (int i = 0; i < list.size(); i++) {
-            if (i < list.size() - 1) {
-                result = result + list.get(i).toJson() + ",\n";
-            } else {
-                result = result + list.get(i).toJson() + "\n";
-            }
-        }
-        result = result + "]";
-        return result;
-    }
 }

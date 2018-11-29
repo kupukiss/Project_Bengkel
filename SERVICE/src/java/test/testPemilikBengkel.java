@@ -14,14 +14,15 @@ import pojos.PemilikBengkel;
  * @author Acer
  */
 public class testPemilikBengkel {
-      public static void main(String[] args) {
-          PemilikBengkelHelper helper = new PemilikBengkelHelper();
+
+    public static void main(String[] args) {
+        PemilikBengkelHelper helper = new PemilikBengkelHelper();
         List<PemilikBengkel> list = helper.getPemilikBengkel();
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i).getNama());
+            System.out.println(list.get(i).getEmail());
+            System.out.println(list.get(i).getPassword());
             System.out.println(list.get(i).getAlamat());
         }
     }
 }
-
-
