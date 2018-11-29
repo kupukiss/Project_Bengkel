@@ -37,10 +37,10 @@
 
                 <!-- Menu Area -->
                 <ul>
-                    <a  href="Home.html">Home</a>
+                    <a  href="index.html">Home</a>
                 </ul>
                 <ul class="dropdown">
-                    <a href="Home.html" class="dropbtn">Bengkel</a>
+                    <a href="index.html" class="dropbtn">Bengkel</a>
                     <div class="dropdown-content">
                         <a href="dataPB">Data PB</a>
                         <a href="sign-in_Bengkel.html">Sign in</a>
@@ -191,7 +191,7 @@
                             };
 
                             var html = JSON.stringify(json, 0, 100);
-                            var url = "http://localhost:8085/bengkelService/webresources/PemilikBengkel/add";
+                            var url = "http://202.94.83.190:8080/SERVICE/webresources/PemilikBengkel/addPB";
                             var xhr = new XMLHttpRequest();
                             xhr.open("POST", url, false);
                             xhr.setRequestHeader("Content-type", "application/json");
@@ -211,217 +211,215 @@
 
                     <!-- Contact Section -->
 
-
-                    <!-- Footer -->
-                    <footer class="footer text-center">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4 mb-5 mb-lg-0">
-                                    <h4 class="text-uppercase mb-4">Location</h4>
-                                    <p class="lead mb-0">2215 John Daniel Drive
-                                        <br>Clark, MO 65243</p>
-                                </div>
-                                <div class="col-md-4 mb-5 mb-lg-0">
-                                    <h4 class="text-uppercase mb-4">Around the Web</h4>
-                                    <ul class="list-inline mb-0">
-                                        <li class="list-inline-item">
-                                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                                <i class="fab fa-fw fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                                <i class="fab fa-fw fa-google-plus-g"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                                <i class="fab fa-fw fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                                <i class="fab fa-fw fa-linkedin-in"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                                                <i class="fab fa-fw fa-dribbble"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4">
-                                    <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                                    <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-                                        <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-
-                    <div class="copyright py-4 text-center text-white">
-                        <div class="container">
-                            <small>Copyright &copy; Our Website Bengkel Maju Terus 2018</small>
-                        </div>
+ <!-- Footer -->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">2215 Yoseph Drive
+                            <br>Yogyakarta, MO 55281</p>
                     </div>
-
-                    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-                    <div class="scroll-to-top d-lg-none position-fixed ">
-                        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
+                    <div class="col-md-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                    <i class="fab fa-fw fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                    <i class="fab fa-fw fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                    <i class="fab fa-fw fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                    <i class="fab fa-fw fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                    <i class="fab fa-fw fa-dribbble"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
+                    <div class="col-md-4">
+                        <h4 class="text-uppercase mb-4">About Developer</h4>
+                        <p class="lead mb-0">Developer is make the project is friendly created by @ Yoseph & @ Delviana</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-                    <!-- Portfolio Modals -->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container">
+                <small>Copyright &copy; Our Website Bengkel Maju Terus 2018</small>
+            </div>
+        </div>
 
-                    <!-- Portfolio Modal 1 -->
-                    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
-                        <div class="portfolio-modal-dialog bg-white">
-                            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-3x fa-times"></i>
-                            </a>
-                            <div class="container text-center">
-                                <div class="row">
-                                    <div class="col-lg-8 mx-auto">
-                                        <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                                        <hr class="star-dark mb-5">
-                                        <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
-                                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                            <i class="fa fa-close"></i>
-                                            Close Project</a>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+        <div class="scroll-to-top d-lg-none position-fixed ">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+
+        <!-- Portfolio Modals -->
+
+        <!-- Portfolio Modal 1 -->
+        <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+            <div class="portfolio-modal-dialog bg-white">
+                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                    <i class="fa fa-3x fa-times"></i>
+                </a>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h2 class="text-secondary text-uppercase mb-0">Motor Service</h2>
+                            <hr class="star-dark mb-5">
+                            <img class="img-fluid mb-5" src="img/motor.jpg" alt="">
+                            <p class="mb-5">Bengkel Maju Terus menyediakan layanan jasa pencucian motor. Motor Service hadir hanya untuk anda.. Ayo..buruannn!!!</p>
+                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                                <i class="fa fa-close"></i>
+                                Close Project</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Portfolio Modal 2 -->
-                    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
-                        <div class="portfolio-modal-dialog bg-white">
-                            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-3x fa-times"></i>
-                            </a>
-                            <div class="container text-center">
-                                <div class="row">
-                                    <div class="col-lg-8 mx-auto">
-                                        <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                                        <hr class="star-dark mb-5">
-                                        <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
-                                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                            <i class="fa fa-close"></i>
-                                            Close Project</a>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Portfolio Modal 2 -->
+        <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+            <div class="portfolio-modal-dialog bg-white">
+                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                    <i class="fa fa-3x fa-times"></i>
+                </a>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h2 class="text-secondary text-uppercase mb-0">Driver Service </h2>
+                            <hr class="star-dark mb-5">
+                            <img class="img-fluid mb-5" src="img/motorku.jpg" alt="">
+                            <p class="mb-5">Bengkel Maju Terus hadir hanya untuk anda.. Ayo..buruannn!!!</p>
+                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                                <i class="fa fa-close"></i>
+                                Close Project</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Portfolio Modal 3 -->
-                    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
-                        <div class="portfolio-modal-dialog bg-white">
-                            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-3x fa-times"></i>
-                            </a>
-                            <div class="container text-center">
-                                <div class="row">
-                                    <div class="col-lg-8 mx-auto">
-                                        <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                                        <hr class="star-dark mb-5">
-                                        <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
-                                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                            <i class="fa fa-close"></i>
-                                            Close Project</a>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Portfolio Modal 3 -->
+        <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+            <div class="portfolio-modal-dialog bg-white">
+                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                    <i class="fa fa-3x fa-times"></i>
+                </a>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h2 class="text-secondary text-uppercase mb-0">Car Service</h2>
+                            <hr class="star-dark mb-5">
+                            <img class="img-fluid mb-5" src="img/car.JPG" alt="">
+                            <p class="mb-5">Bengkel Maju Terus hadir hanya untuk anda.. Ayo..buruannn!!!</p>
+                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                                <i class="fa fa-close"></i>
+                                Close Project</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Portfolio Modal 4 -->
-                    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
-                        <div class="portfolio-modal-dialog bg-white">
-                            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-3x fa-times"></i>
-                            </a>
-                            <div class="container text-center">
-                                <div class="row">
-                                    <div class="col-lg-8 mx-auto">
-                                        <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                                        <hr class="star-dark mb-5">
-                                        <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
-                                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                            <i class="fa fa-close"></i>
-                                            Close Project</a>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Portfolio Modal 4 -->
+        <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
+            <div class="portfolio-modal-dialog bg-white">
+                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                    <i class="fa fa-3x fa-times"></i>
+                </a>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h2 class="text-secondary text-uppercase mb-0">DoorSmeer Service</h2>
+                            <hr class="star-dark mb-5">
+                            <img class="img-fluid mb-5" src="img/service.jpg" alt="">
+                            <p class="mb-5">Bengkel Maju Terus hadir hanya untuk anda.. Ayo..buruannn!!!</p>
+                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                                <i class="fa fa-close"></i>
+                                Close Project</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Portfolio Modal 5 -->
-                    <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
-                        <div class="portfolio-modal-dialog bg-white">
-                            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-3x fa-times"></i>
-                            </a>
-                            <div class="container text-center">
-                                <div class="row">
-                                    <div class="col-lg-8 mx-auto">
-                                        <h2 class="text-secondary text-uppercase mb-0">Bengkel Maju Terus</h2>
-                                        <hr class="star-dark mb-5">
-                                        <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
-                                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                            <i class="fa fa-close"></i>
-                                            Close Project</a>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Portfolio Modal 5 -->
+        <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
+            <div class="portfolio-modal-dialog bg-white">
+                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                    <i class="fa fa-3x fa-times"></i>
+                </a>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h2 class="text-secondary text-uppercase mb-0">Bengkel Service</h2>
+                            <hr class="star-dark mb-5">
+                            <img class="img-fluid mb-5" src="img/doorsmeer.jpg" alt="">
+                            <p class="mb-5">Bengkel Maju Terus hadir hanya untuk anda.. Ayo..buruannn!!!</p>
+                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                                <i class="fa fa-close"></i>
+                                Close Project</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Portfolio Modal 6 -->
-                    <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
-                        <div class="portfolio-modal-dialog bg-white">
-                            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-3x fa-times"></i>
-                            </a>
-                            <div class="container text-center">
-                                <div class="row">
-                                    <div class="col-lg-8 mx-auto">
-                                        <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                                        <hr class="star-dark mb-5">
-                                        <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
-                                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                            <i class="fa fa-close"></i>
-                                            Close Project</a>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Portfolio Modal 6 -->
+        <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
+            <div class="portfolio-modal-dialog bg-white">
+                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                    <i class="fa fa-3x fa-times"></i>
+                </a>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h2 class="text-secondary text-uppercase mb-0">Tambal Service</h2>
+                            <hr class="star-dark mb-5">
+                            <img class="img-fluid mb-5" src="img/tambal.jpg" alt="">
+                            <p class="mb-5">Bengkel Maju Terus hadir hanya untuk anda.. Ayo..buruannn!!!</p>
+                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                                <i class="fa fa-close"></i>
+                                Close Project</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Bootstrap core JavaScript -->
-                    <script src="vendor/jquery/jquery.min.js"></script>
-                    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                    <!-- Plugin JavaScript -->
-                    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-                    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-                    <!-- Contact Form JavaScript -->
-                    <script src="js/jqBootstrapValidation.js"></script>
-                    <script src="js/contact_me.js"></script>
+        <!-- Contact Form JavaScript -->
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
 
-                    <!-- Custom scripts for this template -->
-                    <script src="js/freelancer.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="js/freelancer.min.js"></script>
 
-                    </body>
+    </body>
 
-                    </html>
+</html>
