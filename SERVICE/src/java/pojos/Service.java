@@ -27,7 +27,7 @@ public class Service  implements java.io.Serializable {
     }
 
     public String toJson() {
-        return "{\"no Antrian\":" + getNoAntrian()+  "}";
+        return "{\"noAntrian\":" + getNoAntrian()+  "}";
  }
 
 

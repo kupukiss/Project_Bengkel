@@ -116,7 +116,7 @@ public class PemilikBengkel  implements java.io.Serializable {
     }
 
     public String toJson() {
-         return "{\"nama\":" + getNama()+ ",\"email\":" + getEmail() +
+         return "{\"nama\":" + getNama()+ ",\"email\":" + getEmail() + ",\"password\":" + getPassword() +
                  ",\"namaBengkel\":" + getNamaBengkel() + ",\"alamat\":" + getAlamat() + ",\"jamBuka\":" +getJamBuka() + 
                  ",\"jenisKendaraan\":" +  getJenisKendaraan() + ",\"longitud\":" + getLongitud() + ",\"latitude\":" + getLatitude() + 
                   ",\"jamTutup\":" + getJamTutup() + "}";
