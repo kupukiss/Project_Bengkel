@@ -108,9 +108,9 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Hero Area Start ***** -->
-<!--    <section class="hero-area">
+    <section class="hero-area">
         <div class="hero-slides owl-carousel">
-             Single Hero Slide 
+            <!-- Single Hero Slide -->
             <div class="single-hero-slide bg-img bg-overlay-white"> <img src="images/mobil.jpg" alt="Logo">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -123,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-            </div>-->
+            </div>
     
     <style>
         li a, .dropbtn {
@@ -197,64 +197,49 @@
             padding: 0;
         }
     </style>
-    
-    
-      
-    <br><br><br/>
-    <br><br><br/>
-    <br><br><br/>
-    
-        <center><button type="button" onclick="loadDoc()" id="btn">Data PK</button><br><br></center>
+    </section>
+</head>
+<body>
+    <h2><b>Alamat Bengkel Maju Terus</b></h2>
 
-        <div id="id01"></div>
+    <button type="button" onclick="loadDoc()">Click Here</button>
 
-        <script>
-            function loadDoc() {
-                var xmlhttp = new XMLHttpRequest();
+    <p id="demo"></p>
+    <div id="map"></div>
 
-        var url = "http://localhost:8080/SERVICE/webresources/pemilikKendaraan";
-        //                var url = "http://202.94.83.190:8080/SERVICE/webresources/PemilikBengkel";
 
-                xmlhttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                        myFunction(this.responseText);
+    <script>
+        var map;
+        function loadDoc() {
+
+            //                var url = "http://202.94.83.190:8080/165314056_servicesr/webresources/Location/getLocation";
+            var url = "http://localhost:8080/SERVICE/webresources/Location/getLocation"
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+
+                    var obj = JSON.parse(this.responseText);
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: obj[0].lat, lng: obj[0].lng},
+                        zoom: 8
+                    });
+                    var marker = [];
+                    for (var i = 0; i < obj.length; i++) {
+                        marker[i] = new google.maps.Marker({position: {lat: obj[i].lat, lng: obj[i].lng}, map: map});
                     }
                 }
-                xmlhttp.open("GET", url, true);
-                xmlhttp.send();
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnD2l64I6G6fUkPpc3D79Jcau30v8xEKE&callback=initMap"
+    async defer></script>
 
-                function myFunction(response) {
-                    var arr = JSON.parse(response);
-                    var i;
-                    var out = "<center><table align='center' style='width: 60%;' border='1'> \n\
-            <tr><td>nama</td><td>email</td><td>password</td></tr></center>";
-
-                    for (i = 0; i < arr.length; i++) {
-                        out += "<tr><td>" +
-                                arr[i].nama +
-                                "</td><td>" +
-                                arr[i].email +
-                                "</td><td>" +
-                                arr[i].password;
-                                
-
-                    }
-                    out += "</table>";
-                    document.getElementById("id01").innerHTML = out;
-                }
-            }
-        </script>
-
-      
-        <br><br><br/>
-        <br><br><br/>
-        <br><br><br/>
-        <br><br><br/>
-        <br><br><br/>
-        <br><br><br/>
-        <br><br><br/>
-        <br><br><br/>
-        <br><br><br/>
+    
+    
+    
     
     <!-- ***** Emergency Area Start ***** -->
     <div class="medilife-emergency-area section-padding-100-50">
