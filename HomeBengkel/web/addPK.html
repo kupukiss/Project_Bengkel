@@ -57,15 +57,20 @@
                                         <li class="dropdown">
                                             <a href="#" class="dropbtn">Bengkel</a>
                                             <div class="dropdown-content">
-                                                <a href="daftarPemilikBengkel_1.html">Daftar PB</a>
-                                                <a href="addBengkel.html">Tambah PB</a>
+                                                <a href="addPB.html">Tambah PB</a>
                                             </div>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#" class="dropbtn">Kendaraan</a>
                                             <div class="dropdown-content">
-                                                <a href="daftarPemilikKendaraan_1.html">Daftar PK</a>
-                                                <a href="addKendaraan.html">Tambah PK</a>
+                                                <a href="addPK.html">Tambah PK</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropbtn">Info Bengkel</a>
+                                            <div class="dropdown-content">
+                                                <a href="daftarPemilikBengkel_1.html">List Of PB</a>
+                                                <a href="daftarPemilikKendaraan_1.html">List Of PK</a>
                                             </div>
                                         </li>
                                         <li class="dropdown">
@@ -86,9 +91,6 @@
                                                 <a href="APIGoogle.html">Lihat Maps</a>
                                             </div>
                                         </li>
-                                        <ul>
-                                            <li><a  href="infoBengkel.html">Info</a></li>
-                                        </ul>
                                         <ul>
                                             <li><a  href="daftar.html">Register</a></li>
                                         </ul>
@@ -224,7 +226,7 @@
                                                         };
 
                                                         var html = JSON.stringify(json, 0, 100);
-                                                        var url = "http://localhost:8080/SERVICE/webresources/pemilikKendaraan/addPK";
+                                                        var url = "http://202.94.83.190:8080/serviceBengkel/webresources/pemilikKendaraan/addPK";
                                                         var xhr = new XMLHttpRequest();
                                                         xhr.open("POST", url, false);
                                                         xhr.setRequestHeader("Content-type", "application/json");
