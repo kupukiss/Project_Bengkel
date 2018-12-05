@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!-- Title  -->
+        <title>BENGKEL MAJU TERUS</title>
+
+        <!-- Favicon  -->
+        <link rel="icon" href="img/core-img/favicon.ico">
+
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <!-- ***** Header Area Start ***** -->
+        <header class="header-area">
+            <!-- Top Header Area -->
+            <div class="top-header-area">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-12 h-100">
+                            <div class="h-100 d-md-flex justify-content-between align-items-center">
+                                <p>Welcome to <span>Bengkel Maju Terus</span> Aplication Route</p>
+                                <p>Opening Hours : Monday to Saturday - 8am to 10pm Contact : <span>+12-821-3369-8920</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Header Area -->
+            <div class="main-header-area" id="stickyHeader">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12 h-100">
+                            <div class="main-menu h-100">
+                                <nav class="navbar h-100 navbar-expand-lg">
+                                    <!-- Logo Area  -->
+                                    <a class="navbar-brand" href="Home.html"><img src="images/logo.JPG" alt="Logo"></a>
+
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                                    <div class="collapse navbar-collapse" id="medilifeMenu">
+                                        <!-- Menu Area -->
+                                        <ul>
+                                            <li><a  href="Home.html">Home</a></li>
+                                        </ul>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropbtn">Bengkel</a>
+                                            <div class="dropdown-content">
+                                                <a href="daftarPemilikBengkel.html">Daftar PB</a>
+                                                <a href="signBengkel.html">Login PB</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropbtn">Kendaraan</a>
+                                            <div class="dropdown-content">
+                                                <a href="daftarPemilikKendaraan.html">Daftar PK</a>
+                                                <a href="signKendaraan.html">Login PK</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropbtn">Jenis Kendaraan</a>
+                                            <div class="dropdown-content">
+                                                <a href="jenisKendaraan_1.html">Daftar Kendaraan</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropbtn">Service</a>
+                                            <div class="dropdown-content">
+                                                <a href="service.html">Daftar Antrian</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropbtn">Maps</a>
+                                            <div class="dropdown-content">
+                                                <a href="APIGoogle.html">Lihat Maps</a>
+                                            </div>
+                                        </li>
+                                        <ul>
+                                            <li><a  href="infoBengkel.html">Info</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li><a  href="daftar.html">Register</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li><a  href="logout.html">Logout</a></li>
+                                        </ul>
+
+                                    </div>
+                            
+        
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+<!--     ***** Hero Area Start ***** 
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+             Single Hero Slide 
+            <div class="single-hero-slide bg-img bg-overlay-white"> <img src="images/mobil.jpg" alt="Logo">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="hero-slides-content">
+                                <h2 data-animation="fadeInUp" data-delay="100ms">BENGKEL MAJU TERUS<br>Aplikasi Pencari Bengkel Terdekat</h2>
+                                <h6 data-animation="fadeInUp" data-delay="400ms">User dapat menemukan bengkel terdekat dari lokasi user.</h6>
+                                <a href="#" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Bengkelku<span>+</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+    
+    <style>
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        h1 {
+            border-bottom: 3px solid #cc9900;
+            color: #996600;
+            font-size: 30px;
+        }
+        table, th ,td  {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        table tr:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+        table tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style><!--
+    -->
+    
+        <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height:200%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    
+    
+     
+    
+       
+    <br><br><br/>
+    <br><br><br/>
+    <br><br><br/>
+    
+
+        <center><button type="button" onclick="loadDoc()" id="btn">Data Antrian</button><br><br></center>
+
+        <div id="id01"></div>
+
+        <script>
+            function loadDoc() {
+                var xmlhttp = new XMLHttpRequest();
+
+        var url = "http://202.94.83.190:8080/serviceBengkel/webresources/Service";
+        //                var url = "http://202.94.83.190:8080/SERVICE/webresources/PemilikBengkel";
+
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        myFunction(this.responseText);
+                    }
+                }
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+
+                function myFunction(response) {
+                    var arr = JSON.parse(response);
+                    var i;
+                    var out = "<center><table align='center' style='width: 60%;' border='1'> \n\
+            <tr><td>noAntrian</td></tr></center>";
+
+                    for (i = 0; i < arr.length; i++) {
+                        out += "<tr><td>" +
+                                arr[i].noAntrian ;
+                                
+
+                    }
+                    out += "</table>";
+                    document.getElementById("id01").innerHTML = out;
+                }
+            }
+        </script>
+
+      
+        <br><br><br/>
+        <br><br><br/>
+        <br><br><br/>
+        <br><br><br/>
+        <br><br><br/>
+    
+    <!-- ***** Emergency Area Start ***** -->
+    <div class="medilife-emergency-area section-padding-100-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="emergency-content">
+                        <i class="icon-smartphone"></i>
+                        <h2>For Emergency calls</h2>
+                        <h3>+12-821-3369-8920</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <!-- Single Emergency Helpline -->
+                        <div class="col-12 col-sm-6">
+                            <div class="single-emergency-helpline mb-50">
+                                <h5>Aceh</h5>
+                                <p>0080 673 729 766 <br> contact@acehbengkel.com <br> Aceh Str, no 14-18 <br> 41770 NAD</p>
+                            </div>
+                        </div>
+                        <!-- Single Emergency Helpline -->
+                        <div class="col-12 col-sm-6">
+                            <div class="single-emergency-helpline mb-50">
+                                <h5>Medan</h5>
+                                <p>0812 6731 4729<br> contact@medanbengkel.com <br> Medan Str, no 11-18 <br> 51234 Medan</p>
+                            </div>
+                        </div>
+                        <!-- Single Emergency Helpline -->
+                        <div class="col-12 col-sm-6">
+                            <div class="single-emergency-helpline mb-50">
+                                <h5>Yogyakarta</h5>
+                                <p>0821 1673 1729<br> contact@yogbengkel.com <br> Yogyakarta Str, no 10-13 <br> 51281 Yogyakrta</p>
+                            </div>
+                        </div>
+                        <!-- Single Emergency Helpline -->
+                        <div class="col-12 col-sm-6">
+                            <div class="single-emergency-helpline mb-50">
+                                <h5>Batam</h5>
+                                <p>0878 6223 1172<br> contact@batambengkel.com <br> Batam Str, no 10-17 <br> 41770 Batam</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Emergency Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-100">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="footer-logo">
+                                <img src="images/logo.JPG" alt="">
+                            </div>
+                            <p>
+                                Memiliki kendaraan pribadi di era saat ini sudah menjadi suatu kebutuhan manusia. 
+                                Namun, perlunya perawatan pada kendaraan sangat penting untuk menjaga performa kendaraan 
+                                tersebut. Bila sebuah kendaraan tidak mendapatkan perawatan, maka akan ada berbagai kendala 
+                                yang akan dialami kendaraan tersebut. Salah satu contohnya adalah mogoknya kendaraan. Maka dari 
+                                itu, kami ingin membuat solusi pada permasalahan tersebut yaitu dengan membuat Aplikasi Pencari 
+                                Bengkel Terdekat dari lokasi user yang mengakses. Prinsipnya adalah user dapat menemukan 
+                                bengkel terdekat dari lokasi user.
+                            </p>
+                            <div class="footer-social-info">
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Latest News</h6>
+                            </div>
+                            <div class="widget-blog-post">
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln1.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Bengkel</a>
+                                        <p>Sept 20, 2018</p>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln2.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Maps Terdekat</a>
+                                        <p>Sept 21, 2018</p>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln3.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Service perawatan kendaraan</a>
+                                        <p>Sept 22, 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Contact Form</h6>
+                            </div>
+                            <div class="footer-contact-form">
+                                <form action="#" method="post">
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="footer-name" id="footer-name" placeholder="Name">
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="footer-email" id="footer-email" placeholder="Email">
+                                    <textarea name="message" class="form-control border-top-0 border-right-0 border-left-0" id="footerMessage" placeholder="Message"></textarea>
+                                    <button type="submit" class="btn medilife-btn">Contact Us <span>+</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>News Letter</h6>
+                            </div>
+
+                            <div class="footer-newsletter-area">
+                                <form action="#">
+                                    <input type="email" class="form-control border-0 mb-0" name="newsletterEmail" id="newsletterEmail" placeholder="Your Email Here">
+                                    <button type="submit">Subscribe</button>
+                                </form>
+                                <p>Oleh sebab itu, kita perlu melakukan reparasi di bengkel terdekat. Namun, bagaimana cara kita mengetahui bengkel mana yang terdekat, sedangkan kita tidak tahu lokasi tempat kita berada?.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bottom-footer-content">
+                            <!-- Copywrite Text -->
+                            <div class="copywrite-text">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">Delviana</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>
