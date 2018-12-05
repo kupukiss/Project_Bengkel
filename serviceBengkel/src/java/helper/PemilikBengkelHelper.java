@@ -41,7 +41,7 @@ public class PemilikBengkelHelper {
         return result;
     }
 
-    public List<PemilikBengkel> getAllBengkel() {
+     public List<PemilikBengkel> getAllBengkel() {
         Session session = NewHibernateUtil.getSessionFactory().openSession();
         String query = "from PemilikBengkel";
         Query q = session.createQuery(query);
@@ -49,6 +49,13 @@ public class PemilikBengkelHelper {
         return list;
     }
 
+      public List<PemilikBengkel> getlokasibengkel() {
+        Session session = NewHibernateUtil.getSessionFactory().openSession();
+        String query = "SELECT namaBengkel, longitud, latitude FROM PemilikBengkel";
+        Query q = session.createQuery(query);
+        List<PemilikBengkel> list = q.list();
+        return list;
+    }
  
     public void addNewPB(
             String nama,

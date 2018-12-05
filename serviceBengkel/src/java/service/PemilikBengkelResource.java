@@ -43,6 +43,8 @@ public class PemilikBengkelResource {
      *
      * @return an instance of java.lang.String
      */
+ 
+  
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getJson() {
@@ -90,7 +92,31 @@ public class PemilikBengkelResource {
                 .header("Access-Preflight-Maxage", "2")
                 .build();
     }
-
+    
+     @Path("lokasiaja")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getJson3() {
+        PemilikBengkelHelper help = new PemilikBengkelHelper();
+        List<PemilikBengkel> list = help.getlokasibengkel();
+        Gson gson = new Gson();
+        String json = gson.toJson(list);
+        System.out.println(json);
+        return Response.status(Response.Status.OK)//penting utama
+                .entity(json)//utama
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods",
+                        "GET,POST,HEAD,OPTIONS,PUT")
+                .header("Access-Control-Allow-Headers",
+                        "Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers")
+                .header("Access-Exposed-Headers",
+                        "Access-Control-Allow-Origin,Access-Control-Allow-Credentials")
+                .header("Access-Support-Credentials",
+                        "true")
+                .header("Access-Control-Max-Age", "2")
+                .header("Access-Preflight-Maxage", "2")
+                .build();
+    }
     /**
      * PUT method for updating or creating an instance of PemilikBengkelResource
      *

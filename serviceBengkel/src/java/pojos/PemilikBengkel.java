@@ -124,6 +124,10 @@ public class PemilikBengkel implements java.io.Serializable {
                 + ",\"jamTutup\":" + getJamTutup() + "}";
 
     }
+ public String toJson3() {
+        return "{\"namaBengkel\":" + getNamaBengkel() +",\"longitud\":" + getLongitud() + ",\"latitude\":" + getLatitude()
+                + "}";
 
+    }
   
 }
