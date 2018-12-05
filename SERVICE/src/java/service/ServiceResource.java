@@ -5,8 +5,9 @@
  */
 package service;
 
-import helper.LocationHelper;
+import com.google.gson.Gson;
 import helper.ServiceHelper;
+import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
@@ -17,6 +18,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import pojos.Service;
 
 /**
  * REST Web Service
@@ -37,14 +39,20 @@ public class ServiceResource {
 
     /**
      * Retrieves representation of an instance of service.ServiceResource
+     *
      * @return an instance of java.lang.String
      */
-      @GET
+    @GET
     @Produces(MediaType.APPLICATION_JSON)
-     public Response getJson() {
-        //TODO return proper representation object
-                return Response.status(Response.Status.OK)
-       .entity(ServiceHelper.toJson())
+    public Response getJson() {
+        ServiceHelper help = new ServiceHelper();
+        List<Service> list = help.getService();
+        Gson gson = new Gson();
+        String json = gson.toJson(list);
+        System.out.println(json);
+        return Response.status(Response.Status.OK)//penting utama
+                .entity(json)//utama
+
                 .header("Access-Control-Allow-Origin", "*")
                 .header("Access-Control-Allow-Methods",
                         "GET,POST,HEAD,OPTIONS,PUT")
@@ -57,10 +65,11 @@ public class ServiceResource {
                 .header("Access-Control-Max-Age", "2")
                 .header("Access-Preflight-Maxage", "2")
                 .build();
-   }
+    }
 
     /**
      * PUT method for updating or creating an instance of ServiceResource
+     *
      * @param content representation for the resource
      */
     @PUT

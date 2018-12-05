@@ -27,8 +27,8 @@ public class Service  implements java.io.Serializable {
     }
 
     public String toJson() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        return "{\"noAntrian\":" + getNoAntrian()+  "}";
+ }
 
 
 

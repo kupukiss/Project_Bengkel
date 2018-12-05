@@ -7,6 +7,7 @@ package service;
 
 import com.google.gson.Gson;
 import helper.PemilikKendaraanHelper;
+import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
@@ -46,9 +47,14 @@ public class PemilikKendaraanResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getJson() {
-        //TODO return proper representation object
-        return Response.status(Response.Status.OK)
-                .entity(PemilikKendaraanHelper.toJson())
+         PemilikKendaraanHelper help = new PemilikKendaraanHelper();
+        List<PemilikKendaraan> list = help.getPemilikKendaraan();
+        Gson gson = new Gson();
+        String json = gson.toJson(list);
+        System.out.println(json);
+        return Response.status(Response.Status.OK)//penting utama
+                .entity(json)//utama
+       
                 .header("Access-Control-Allow-Origin", "*")
                 .header("Access-Control-Allow-Methods",
                         "GET,POST,HEAD,OPTIONS,PUT")
@@ -90,6 +96,6 @@ public class PemilikKendaraanResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson(@QueryParam("email") String email, @QueryParam("password") String password) {
-        return new Gson().toJson(new PemilikKendaraan().login(email, password));
+        return new Gson().toJson(new PemilikKendaraanHelper().login(email, password));
     }
 }

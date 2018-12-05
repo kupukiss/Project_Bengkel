@@ -9,8 +9,9 @@ package pojos;
 public class PemilikBengkel  implements java.io.Serializable {
 
 
-     private String email;
+    
      private String nama;
+      private String email;
      private String password;
      private String namaBengkel;
      private String alamat;
@@ -27,9 +28,10 @@ public class PemilikBengkel  implements java.io.Serializable {
     public PemilikBengkel(String email) {
         this.email = email;
     }
-    public PemilikBengkel(String email, String nama, String password, String namaBengkel, String alamat, String jamBuka, String jenisKendaraan, Double longitud, Double latitude, String jamTutup) {
-       this.email = email;
+    public PemilikBengkel( String nama,String email, String password, String namaBengkel, String alamat, String jamBuka, String jenisKendaraan, Double longitud, Double latitude, String jamTutup) {
+       
        this.nama = nama;
+       this.email = email;
        this.password = password;
        this.namaBengkel = namaBengkel;
        this.alamat = alamat;
@@ -40,9 +42,7 @@ public class PemilikBengkel  implements java.io.Serializable {
        this.jamTutup = jamTutup;
     }
 
-    public PemilikBengkel(String nama, String email, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
    
     public String getEmail() {
         return this.email;
@@ -116,16 +116,21 @@ public class PemilikBengkel  implements java.io.Serializable {
     }
 
     public String toJson() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         return "{\"nama\":" + getNama()+ ",\"email\":" + getEmail() + ",\"password\":" + getPassword() +
+                 ",\"namaBengkel\":" + getNamaBengkel() + ",\"alamat\":" + getAlamat() + ",\"jamBuka\":" +getJamBuka() + 
+                 ",\"jenisKendaraan\":" +  getJenisKendaraan() + ",\"longitud\":" + getLongitud() + ",\"latitude\":" + getLatitude() + 
+                  ",\"jamTutup\":" + getJamTutup() + "}";
+
+    
     }
 
-    public Object login(String email, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   
+
+    
     }
 
 
+  
 
-
-}
 
 

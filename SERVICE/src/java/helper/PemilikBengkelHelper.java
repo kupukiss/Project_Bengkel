@@ -48,14 +48,14 @@ public class PemilikBengkelHelper {
             String namaBengkel,
             String alamat,
             String jamBuka,
-            String jamTutup,
             String jenisKendaraan,
             Double longitud,
-            Double latitude
+            Double latitude,
+            String jamTutup
     ) {
         Session session = NewHibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        PemilikBengkel PB = new PemilikBengkel(nama, email, password);
+        PemilikBengkel PB = new PemilikBengkel(nama, email, password, namaBengkel, alamat, jamBuka, jenisKendaraan, longitud, latitude, jamTutup);
         session.saveOrUpdate(PB);
         tx.commit();
         session.close();
@@ -63,7 +63,7 @@ public class PemilikBengkelHelper {
 
     public PemilikBengkel login(String email, String password) {
         Session session = NewHibernateUtil.getSessionFactory().openSession();
-        String q = "From User a where a.email=:email AND a.password =:password";
+        String q = "From PemilikBengkel p where p.email=:email AND p.password =:password";
 
         Query query = session.createQuery(q);
         query.setParameter("email", email);

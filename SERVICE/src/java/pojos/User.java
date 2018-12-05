@@ -35,6 +35,10 @@ public class User  implements java.io.Serializable {
         this.password = password;
     }
 
+    public String toJson() {
+          return "{\"email\":" + getEmail()+ ",\"password\":" + getPassword() + "}";
+ }
+
 
 
 
