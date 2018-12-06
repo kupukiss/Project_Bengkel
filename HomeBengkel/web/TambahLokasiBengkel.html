@@ -60,18 +60,7 @@ and open the template in the editor.
                                         <ul>
                                             <li><a  href="admin.html">Home</a></li>
                                         </ul>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropbtn">Bengkel</a>
-                                            <div class="dropdown-content">
-                                                <a href="addPB.html">Tambah PB</a>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropbtn">Kendaraan</a>
-                                            <div class="dropdown-content">
-                                                <a href="addPK.html">Tambah PK</a>
-                                            </div>
-                                        </li>
+
                                         <li class="dropdown">
                                             <a href="#" class="dropbtn">Info Bengkel</a>
                                             <div class="dropdown-content">
@@ -97,20 +86,24 @@ and open the template in the editor.
                                                 <a href="APIGoogle.html">Lihat Maps</a>
                                             </div>
                                         </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropbtn">Pendaftaran</a>
+                                            <div class="dropdown-content">
+                                                <a href="addPB.html">Daftar Akun PB</a>
+                                                <a href="addPK.html">Daftar Akun PK</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropbtn">Login</a>
+                                            <div class="dropdown-content">
+                                                <a href="signBengkel.html">Login PB</a>
+                                            </div>
+                                        </li>
                                         <ul>
-                                            <li><a  href="daftar.html">Register</a></li>
-                                        </ul>
-                                        <ul>
-                                            <li><a  href="logout.html">Logout</a></li>
+                                            <li><a  href="Logout.html">Logout</a></li>
                                         </ul>
 
                                     </div>
-
-
-
-
-
-
 
                                     </header>
                                     <!--                                     ***** Header Area End ***** 
@@ -209,7 +202,7 @@ and open the template in the editor.
                                                     <label>lng</label>
                                                     <input type="text" class="form-control" name="lng" placeholder="Masukan lng">
                                                 </div>
-                                                 <div class="form-group"> 
+                                                <div class="form-group"> 
                                                     <label>name</label>
                                                     <input type="text" class="form-control" name="name" placeholder="Masukan nama bengkel">
                                                 </div>
@@ -221,22 +214,22 @@ and open the template in the editor.
   <script>
                                                     function make_json(form) {
                                                         var json = {
-                                                            "id":form.id.value,
+                                                            "id": form.id.value,
                                                             "lat": form.lat.value,
                                                             "lng": form.lng.value,
-                                                             "name": form.name.value
+                                                            "name": form.name.value
                                                         };
                                                         var html = JSON.stringify(json, 0, 100);
 
-                                                        var Url = "http://localhost:8084/serviceBengkel/webresources/Location/addLocation";
+                                                        var Url = "http://202.94.83.190:8080/serviceBengkel/webresources/Location/addLocation";
                                                         var xhr = new XMLHttpRequest();
                                                         xhr.open('POST', Url, false);
                                                         xhr.setRequestHeader("Content-type", "application/json");
                                                         xhr.send(html);
-                                                        document.getElementById("berhasil").innerHTML = "Pendaftaran Berhasil";
+                                                        document.getElementById("berhasil").innerHTML = "Save Succesfull";
                                                         return false;
                                                     }
-                                                  </script>
+                                                                                                                                              </script>
                                             </pre></div>
                                     </section>
 
