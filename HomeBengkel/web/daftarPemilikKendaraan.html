@@ -220,15 +220,14 @@
                                                 var arr = JSON.parse(response);
                                                 var i;
                                                 var out = "<center><table align='center' style='width: 60%;' border='1'> \n\
-                                        <tr><td>nama</td><td>email</td><td>password</td></tr></center>";
+                                        <tr><td>nama</td><td>email</td></tr></center>";
 
                                                 for (i = 0; i < arr.length; i++) {
                                                     out += "<tr><td>" +
                                                             arr[i].nama +
                                                             "</td><td>" +
-                                                            arr[i].email +
-                                                            "</td><td>" +
-                                                            arr[i].password;
+                                                            arr[i].email ;
+                                                            
 
 
                                                 }
