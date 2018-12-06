@@ -10,6 +10,7 @@ import util.NewHibernateUtil;
 import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import pojos.Location;
 
 public class LocationHelper {
@@ -39,6 +40,14 @@ public class LocationHelper {
         }
         result = result + "]";
         return result;
+    }
+      public void addNewLocation(long id,double lat, double lng, String name) {
+        Session session = NewHibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        Location location = new Location(id, lat, lng, name);
+        session.saveOrUpdate(location);
+        transaction.commit();
+        session.close();
     }
       
       

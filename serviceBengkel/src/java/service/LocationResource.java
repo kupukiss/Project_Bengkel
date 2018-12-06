@@ -13,6 +13,7 @@ import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
@@ -78,6 +79,24 @@ public class LocationResource {
                         "true")
                 .header("Access-Control-Max-Age", "2")
                 .header("Access-Preflight-Maxage", "2")
+                .build();
+    }
+     @POST
+    @Path("addLocation")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addNewLocation(String data) {
+        Gson gson = new Gson();
+        Location location = gson.fromJson(data, Location.class);
+        LocationHelper helper = new LocationHelper();
+        helper.addNewLocation(
+                location.getId(),
+                location.getLat(),
+                location.getLng(),
+                location.getName());
+
+        return Response
+                .status(200)
+                .entity(location)
                 .build();
     }
 }

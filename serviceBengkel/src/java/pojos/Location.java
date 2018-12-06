@@ -21,9 +21,11 @@ public class Location  implements java.io.Serializable {
     public Location(long id) {
         this.id = id;
     }
-    public Location(long id, Double lat, Double lng, String name) {
-       this.id = id;
-       this.lat = lat;
+  
+
+    public Location(long id, double lat, double lng, String name) {
+        this.id=id;
+        this.lat = lat;
        this.lng = lng;
        this.name = name;
     }
@@ -59,7 +61,7 @@ public class Location  implements java.io.Serializable {
 
 public String toJson() {
 
-        return "{\"lat\":" + getLat() + ",\"lng\":" + getLng() + ",\"name\":" + getName() +  "}";
+        return "{\"id\":" +getId()+ ",\"lat\":" + getLat() + ",\"lng\":" + getLng() + ",\"name\":" + getName() +  "}";
 
     }
 
