@@ -24,9 +24,9 @@ public class PemilikBengkel implements java.io.Serializable {
         this.email = email;
     }
 
-    public PemilikBengkel(String email, String nama, String password, String namaBengkel, String alamat, String jamBuka, String jenisKendaraan, Double longitud, Double latitude, String jamTutup) {
-        this.email = email;
+    public PemilikBengkel(String nama, String email, String password, String namaBengkel, String alamat, String jamBuka, String jenisKendaraan, Double longitud, Double latitude, String jamTutup) {
         this.nama = nama;
+        this.email = email;
         this.password = password;
         this.namaBengkel = namaBengkel;
         this.alamat = alamat;
@@ -124,10 +124,11 @@ public class PemilikBengkel implements java.io.Serializable {
                 + ",\"jamTutup\":" + getJamTutup() + "}";
 
     }
- public String toJson3() {
-        return "{\"namaBengkel\":" + getNamaBengkel() +",\"longitud\":" + getLongitud() + ",\"latitude\":" + getLatitude()
+
+    public String toJson3() {
+        return "{\"namaBengkel\":" + getNamaBengkel() + ",\"longitud\":" + getLongitud() + ",\"latitude\":" + getLatitude()
                 + "}";
 
     }
-  
+
 }
