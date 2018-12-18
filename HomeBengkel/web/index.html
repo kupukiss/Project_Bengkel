@@ -182,9 +182,6 @@
                                     <body>
                                         <h2><b>Alamat Bengkel Maju Terus</b></h2>
 
-                                        <button type="button" onclick="loadDoc()">Lihat Maps</button>
-
-
 
                                         <p id="demo"></p>
                                         <div id="map"></div>
@@ -192,7 +189,6 @@
 
                                         <script>
                                             var map;
-
                                             //                var url = "http://202.94.83.190:8080/165314056_servicesr/webresources/Location/getLocation";
                                             var url = "http://202.94.83.190:8080/serviceBengkel/webresources/Location/getLocation";
                                             var xhttp = new XMLHttpRequest();
@@ -213,7 +209,7 @@
                                             };
                                             xhttp.open("GET", url, true);
                                             xhttp.send();
-                                            }
+
                                         </script>
                                         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnD2l64I6G6fUkPpc3D79Jcau30v8xEKE&callback=initMap"
                                         async defer></script>
